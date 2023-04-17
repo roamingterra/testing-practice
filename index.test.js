@@ -1,16 +1,19 @@
+import { capitalizeFirstLetter, reverseString, calculator } from "./index";
+
 // TEST #1
 test("capitalize first letter of string", () => {
   // Define test parameters
-  const string = "Jest is cool";
+  const string = "jest is cool";
+  const result = capitalizeFirstLetter(string);
   // Perform test
-  expect(string).toMatch(/^[A-Z].*/);
+  expect(result).toMatch(/^[A-Z].*/);
 });
 
 // TEST #2
 test("function should return a string reversed", () => {
   // Define test parameters
   const input = "I like Jest";
-  const result = "tesJ ekil I";
+  const result = reverseString(input);
 
   // Perform test
   expect(result).toBe("tesJ ekil I");
@@ -19,10 +22,10 @@ test("function should return a string reversed", () => {
 // TEST #3
 test("calculator object to perform all basic math operations", () => {
   // Define test parameters
-  const additionInput = 2 + 2;
-  const subtractionInput = 2 - 2;
-  const divisionInput = 2 / 2;
-  const multiplicationInput = 2 * 2;
+  const additionInput = calculator.addition(2, 2);
+  const subtractionInput = calculator.subtraction(2, 2);
+  const divisionInput = calculator.division(2, 2);
+  const multiplicationInput = calculator.multiplication(2, 2);
 
   // Perform test
   expect(additionInput).toBe(4);
