@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter, reverseString, calculator } from "./index";
+import { capitalizeFirstLetter, reverseString, calculator } from "./index.js";
 
 // TEST #1
 test("capitalize first letter of string", () => {
@@ -16,7 +16,7 @@ test("function should return a string reversed", () => {
   const result = reverseString(input);
 
   // Perform test
-  expect(result).toBe("tesJ ekil I");
+  expect(result).toBe("tseJ ekil I");
 });
 
 // TEST #3
