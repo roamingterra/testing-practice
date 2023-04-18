@@ -62,7 +62,22 @@ function caesarCipher(input, shiftFactor) {
 }
 
 function analyzeArray(array) {
-  return { average: 4, min: 1, max: 8, length: 6 };
+  const average =
+    array.reduce(function (sum, value) {
+      return sum + value;
+    }, 0) / array.length;
+
+  const min = array.reduce(function (acc, val) {
+    return acc < val ? acc : val;
+  });
+
+  const max = array.reduce(function (acc, val) {
+    return acc < val ? val : acc;
+  });
+
+  const length = array.length;
+
+  return { average: average, min: min, max: max, length: length };
 }
 
 export {
