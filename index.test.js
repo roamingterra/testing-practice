@@ -1,4 +1,9 @@
-import { capitalizeFirstLetter, reverseString, calculator } from "./index.js";
+import {
+  capitalizeFirstLetter,
+  reverseString,
+  calculator,
+  caesarCipher,
+} from "./index.js";
 
 // TEST #1
 test.skip("capitalize first letter of string", () => {
@@ -39,22 +44,22 @@ test("shift all letters of a string by one letter", () => {
   // Define test parameters
   const input1 = "Defend z east wall of z castle!";
   const shift1 = 1;
-  const cipherText1 = "Efgfoe a fbtu xbmm pg a dbtumf!";
+  const cipherText1 = caesarCipher(input1, shift1);
   expect(cipherText1).toBe("Efgfoe a fbtu xbmm pg a dbtumf!");
 
   const input2 = "a";
   const shift2 = 26;
-  const cipherText2 = "z";
+  const cipherText2 = caesarCipher(input2, shift2);
   expect(cipherText2).toBe("z");
 
   const input3 = "A";
   const shift3 = 26;
-  const cipherText3 = "Z";
+  const cipherText3 = caesarCipher(input3, shift3);
   expect(cipherText3).toBe("Z");
 
   const input4 = "a";
   const shift4 = 52;
-  const cipherText4 = "z";
+  const cipherText4 = caesarCipher(input4, shift4);
   expect(cipherText4).toBe("z");
 
   /*
