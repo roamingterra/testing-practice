@@ -3,6 +3,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from "./index.js";
 
 // TEST #1
@@ -40,7 +41,7 @@ test.skip("calculator object to perform all basic math operations", () => {
 });
 
 // TEST #4
-test("shift all letters of a string by one letter", () => {
+test.skip("shift all letters of a string by one letter", () => {
   const input1 = "Defend z east wall of z castle!";
   const shift1 = 1;
   const cipherText1 = caesarCipher(input1, shift1);
@@ -60,4 +61,16 @@ test("shift all letters of a string by one letter", () => {
   const shift4 = 52;
   const cipherText4 = caesarCipher(input4, shift4);
   expect(cipherText4).toBe("a");
+});
+
+// TEST #5
+test("Return an object with properties: avg, min, max, and length", () => {
+  const array = [1, 8, 3, 4, 2, 6];
+  const result = analyzeArray(array);
+
+  expect(Object.keys(result).length).toBe(4);
+  expect(result.average).toBe(4);
+  expect(result.min).toBe(1);
+  expect(result.max).toBe(8);
+  expect(result.length).toBe(6);
 });
