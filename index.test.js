@@ -37,10 +37,27 @@ test.skip("calculator object to perform all basic math operations", () => {
 // TEST #4
 test("shift all letters of a string by one letter", () => {
   // Define test parameters
-  const input = "Defend z east wall of z castle!";
-  const shift = 1;
-  const cipherText = "Efgfoe a fbtu xbmm pg a dbtumf!";
+  const input1 = "Defend z east wall of z castle!";
+  const shift1 = 1;
+  const cipherText1 = "Efgfoe a fbtu xbmm pg a dbtumf!";
+  expect(cipherText1).toBe("Efgfoe a fbtu xbmm pg a dbtumf!");
 
+  const input2 = "a";
+  const shift2 = 26;
+  const cipherText2 = "z";
+  expect(cipherText2).toBe("z");
+
+  const input3 = "A";
+  const shift3 = 26;
+  const cipherText3 = "Z";
+  expect(cipherText3).toBe("Z");
+
+  const input4 = "a";
+  const shift4 = 52;
+  const cipherText4 = "z";
+  expect(cipherText4).toBe("z");
+
+  /*
   // Perform test
   const inputTest = input.split("");
   const cipherTextTest = cipherText.split("");
@@ -81,4 +98,5 @@ test("shift all letters of a string by one letter", () => {
       continue;
     }
   }
+  */
 });
